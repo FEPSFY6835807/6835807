@@ -1,129 +1,110 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Koenigsegg one:1</title>
+    <title>Your University Project</title>
     <style>
         body {
             font-family: 'Arial', sans-serif;
+            background-color: #f4f4f4;
             margin: 0;
             padding: 0;
-            background-color: #f5f5f5;
-            color: #333;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
+            box-sizing: border-box;
+        }
+
+        header {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 1em;
         }
 
         section {
-            width: 60%;
-            background: #fff;
-            padding: 30px;
+            max-width: 800px;
+            margin: 20px auto;
+            background-color: white;
+            padding: 20px;
             border-radius: 8px;
-            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-            text-align: left;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
 
-        h1 {
+        h1, h2, h3 {
             color: #333;
-            margin-bottom: 20px;
         }
 
-        textarea {
+        label {
+            display: block;
+            margin: 10px 0;
+            font-weight: bold;
+        }
+
+        input, textarea {
             width: 100%;
             padding: 10px;
-            margin-bottom: 20px;
+            margin: 5px 0 20px 0;
+            display: inline-block;
             border: 1px solid #ccc;
-            border-radius: 4px;
             box-sizing: border-box;
-            background-color: #f9f9f9;
-            color: #333;
-            resize: none;
-            pointer-events: none; /* Disable user interaction */
-        }
-
-        .slideshow-pdf {
-            width: 100%;
-            height: 400px; /* Adjust the height as needed */
-            border: none;
+            border-radius: 4px;
         }
 
         button {
-            background-color: #bdc3c7;
-            color: #333;
+            background-color: #333;
+            color: white;
             padding: 10px 20px;
             border: none;
             border-radius: 4px;
             cursor: pointer;
-            display: block;
-            margin: 20px auto;
+            font-size: 16px;
         }
 
         button:hover {
-            background-color: #95a5a6;
+            background-color: #555;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 1em;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
         }
     </style>
 </head>
-
 <body>
+
+    <header>
+        <h1>Your University Project</h1>
+    </header>
+
     <section>
-        <h1>Koenigsegg</h1>
+        <label for="module">Module Name: ENG0018 Conference project</label>
+        <input type="text" id="module" value="Your Module" readonly>
 
-        <textarea id="module" rows="1" readonly>
-            Module Name: ENG0018 
-        </textarea>
+        <label for="articleName">Article Name: The one and only one:1</label>
+        <input type="text" id="articleName" value="Your Article" readonly>
 
-        <textarea id="articleName" rows="1" readonly>
-            The one and only one:1
-        </textarea>
+        <label for="studentID">Student ID: 6835807</label>
+        <input type="text" id="studentID" value="Your Student ID" readonly>
 
-        <textarea id="studentID" rows="1" readonly>
-            Student ID: 6835807
-        </textarea>
+        <label for="abstract">Abstract:</label>
+        <textarea id="abstract" rows="4" readonly>Your abstract goes here.</textarea>
 
-        <textarea id="abstract" rows="6" readonly>
-            Koenigsegg is a car company which produces hypercars and I will be showing you the phenomenon behind one of their cars.
-        </textarea>
+        <label for="article">Article:</label>
+        <textarea id="article" rows="10" readonly>Your article goes here.</textarea>
 
-        <textarea id="article" rows="10" readonly>
-           The marvellous minds behind the Koenigsegg one:1 are none other Christian Von Koenigsegg and his team. The Koenigsegg one:1 is the only car with the horsepower to curb weight ratio in kilograms being a ratio of 1:1. This is a remarkable feat of engineering as everything from the engine and suspension to the exhaust has to be considered carefully as everything will contribute to the weight. As well as matching the ratio to 1:1 Koenigsegg also had to make sure this car had raised the performance bar in the world of hyper cars, which Koenigsegg has a formidable reputation.
-           
-            How does the ratio of curb weight to horsepower affect the actual experience of driving the car? 
+        <label for="powerPoint">Upload PowerPoint:</label>
+        <input type="file" id="powerPoint" accept=".ppt, .pptx">
 
-As stated by himself it makes the car “nimble” and “how easily accessible the power is”. He also mentioned that the steering and brakes as well as the chassis was focussed on as well and that the team was also looking to improve the overall experience of driving the car as well as the power output. 
-So inconclusion the One:1 can be seen as one of the most impressive engineering feats in terms of the hypercar industry so far.
-
-
-        </textarea>
-
-        <button type="button" onclick="loadSlideshow()">Load Slideshow</button>
-
-        <div id="slideshowContainer">
-            <!-- The PDF slideshow will be displayed here -->
-        </div>
+        <button onclick="window.location.href = 'other_page.html';">Go to Other Page</button>
     </section>
 
-    <script>
-        function loadSlideshow() {
-            // Get the PDF file path (replace with your actual file path)
-            const pdfFilePath = '/Users/Haroons/Library/CloudStorage/OneDrive-UniversityofSurrey/Desktop/Koenigsegg one-1.pptx';
+    <footer>
+        &copy; 2023 Your University Project
+    </footer>
 
-            // Create a new embed element for the PDF
-            const embedElement = document.createElement('embed');
-            embedElement.classList.add('slideshow-pdf');
-            embedElement.src = pdfFilePath;
-
-           
-            const slideshowContainer = document.getElementById('slideshowContainer');
-            slideshowContainer.innerHTML = '';
-
-            
-            slideshowContainer.appendChild(embedElement);
-        }
-    </script>
 </body>
-
 </html>
