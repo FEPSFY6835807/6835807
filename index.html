@@ -109,18 +109,18 @@ So inconclusion the One:1 can be seen as one of the most impressive engineering 
     <script>
         function loadSlideshow() {
             // Get the PDF file path (replace with your actual file path)
-            const pdfFilePath = 'Koenigsegg one-1.pptx';
+            const pdfFilePath = '/Users/Haroons/Library/CloudStorage/OneDrive-UniversityofSurrey/Desktop/Koenigsegg one-1.pptx';
 
             // Create a new embed element for the PDF
             const embedElement = document.createElement('embed');
             embedElement.classList.add('slideshow-pdf');
             embedElement.src = pdfFilePath;
 
-            // Remove any existing PDFs from the slideshow container
+           
             const slideshowContainer = document.getElementById('slideshowContainer');
             slideshowContainer.innerHTML = '';
 
-            // Append the new PDF embed element to the slideshow container
+            
             slideshowContainer.appendChild(embedElement);
         }
     </script>
